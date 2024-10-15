@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Converter</title>
+</head>
+<body>
+    <style>
+        *{
+          background-color: #54473F;
+        }
+     .textcenter{
+        text-align: center;
+     }
+     .heading{
+        max-width: fit-content;
+        padding: 20px;
+        border-radius: 30px;
+        align-items: center;
+        margin-left: 600px;
+        margin-top: 40px;
+        font-size:25px;
+        border-radius: 20px;
+        border: black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: #E9EED9;
+     }
+     .input-container{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 100px;
+        margin-top: 60px;
+     }
+     .ipop-box{
+        border-radius: 20px;
+        width: 50%;
+        height: 50px;
+        background-color: #CBD2A4;
+        font-size: 30px;
+     }
+     .text{
+        font-size:40px;
+        margin-right: 30px;
+        margin-left: 200px;
+        color: white;
+     }
+    .op{
+        margin-left: 180px;
+    }
+    .btn{
+        padding: 10px 20px;
+        background-color: #9A7E6F;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        margin: 70px -100px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: #e9e2e4;
+        transition: 0.1s;
+        color:black;
+        box-shadow: 10px 10px 30px #181815;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    </style>
+    <h1 class="textcenter heading">"Convert With Ease"</h1>
+    <div class="input-container">
+
+    <div class="text">Input :</div>
+    <input type="text" class="ipop-box input">
+    </div>
+
+    <div class="input-container">
+    <div class="text op">Output:</div>
+    <input type="text" class="ipop-box output"></div>
+ 
+    <div class="btn-container">
+    <button class="btn" onclick="stringop('upper')">UpperCase</button>
+    <button class="btn" onclick="stringop('lower')">LowerCase</button>
+    <button class="btn" onclick="stringop('word')">WordCount</button>
+    <button class="btn" onclick="stringop('char')">Character-Count</button>
+    </div>
+    
+    <script>
+    function stringop(variable){
+        const inputElement = document.getElementById(`input`)
+        const outputElement = document.getElementById(`output`)
+    
+        if(variable =="upper"){
+            outputElement.value=inputElement.value.toUpperCase();
+        }
+    
+    }
+    </script>
+</body>
+</html>
