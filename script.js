@@ -1,20 +1,20 @@
-function stringop(abc){
+function stringop(variable){
     const ipElement = document.getElementById("input")
     const opElement = document.getElementById("output")
 
-    if (abc =="upper"){
-        opElement = ipElement.value.toUpperCase();
+    if (variable =="upper"){
+        opElement.value = ipElement.value.toUpperCase();
     }
-    else if(abc =="lower"){
+    else if(variable =="lower"){
         opElement.value = ipElement.value.toLowerCase();
     }
-    else if(abc =="word"){
-        const totalwords = ipElement.value.split(" ").length;
-
-        opElement.value = `Character Count: ${totalwords}`;
-    }
     else if(variable =="char"){
-        opElement.value = `Character Count: ${ipElement.value.length}`;
+        opElement.value = `Character Count ${ipElement.value.length}`;
+    }
+    else if(variable =="word"){
+        const totalwords = ipElement.value.split(" ").length;
+        opElement.value = `Word count: ${totalwords}`;
+
     }
 
 }
