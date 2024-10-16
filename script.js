@@ -9,7 +9,7 @@ function stringop(variable){
         opElement.value = ipElement.value.toLowerCase();
     }
     else if(variable =="char"){
-        opElement.value = `Character Count ${ipElement.value.length}`;
+        opElement.value = `Character Count: ${ipElement.value.length}`;
     }
     else if(variable =="word"){
         const totalwords = ipElement.value.split(" ").length;
